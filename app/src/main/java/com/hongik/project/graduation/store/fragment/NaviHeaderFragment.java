@@ -1,5 +1,6 @@
 package com.hongik.project.graduation.store.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+
 import com.hongik.project.graduation.store.R;
+import com.hongik.project.graduation.store.activity.LoginActivity;
+import com.hongik.project.graduation.store.activity.RegisterActivity;
 
 public class NaviHeaderFragment extends Fragment {
 
@@ -28,16 +32,18 @@ public class NaviHeaderFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.navi_header_not_login_fragment, container, false);
 
-        signinButton = view.findViewById(R.id.signin_button);
-        signupButton = view.findViewById(R.id.signup_button);
+        signinButton = view.findViewById(R.id.menu_signin_button);
+        signupButton = view.findViewById(R.id.menu_signup_button);
 
 
         signinButton.setOnClickListener(v -> {
-
+            Intent intent = new Intent(getContext(), LoginActivity.class);
+            startActivity(intent);
         });
 
         signupButton.setOnClickListener(v -> {
-
+            Intent intent = new Intent(getContext(), RegisterActivity.class);
+            startActivity(intent);
         });
 
 
