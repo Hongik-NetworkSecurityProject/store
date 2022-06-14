@@ -8,6 +8,7 @@
     <string name="sigin_in">로그인</string>
 
     <string name="navi_title">편의점 영수증 앱입니다.</string>
+    <string name="login_status">로그인 완료</string>
 
 
     <!--        activity_login          -->
@@ -34,5 +35,14 @@
     <string name="activity_register_age">나이</string>
     <string name="activity_register_image">이미지</string>
     <string name="activity_register_signup">SIGN UP</string>
+
+    <!--        navi_menu          -->
+    <string name="set_profile">프로필 설정</string>
+    <string name="my_coupon_deal_list">내 쿠폰 거래 목록</string>
+    <string name="my_coupon_share_list">내 쿠폰 나눔 목록</string>
+    <string name="receipt_photo">영수증 촬영</string>
+    <string name="coupon_deal_board">쿠폰 커래 게시판</string>
+    <string name="coupon_share_board">쿠폰 나눔 게시판</string>
+
 
 </resources>
