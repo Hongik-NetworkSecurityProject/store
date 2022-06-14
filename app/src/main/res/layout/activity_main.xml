@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
 
         android:layout_width="match_parent"
@@ -44,18 +46,17 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/user_recommendation_layout"
-            android:layout_width="380dp"
-            android:layout_height="160dp"
+        <LinearLayout
             android:layout_below="@id/main_header"
-            android:layout_marginLeft="15dp">
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/user_recommendation_text"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
-                android:layout_marginLeft="5dp"
                 android:text="@string/user_recommendation_text"
                 android:textColor="#000000"
                 android:textSize="20sp" />
@@ -63,24 +64,15 @@
             <FrameLayout
                 android:id="@+id/user_recommendation_fragment_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/user_recommendation_text"
+                android:layout_height="160dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/border" />
-        </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/event_list_layout"
-            android:layout_width="380dp"
-            android:layout_height="260dp"
-            android:layout_below="@id/user_recommendation_layout"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp">
 
             <TextView
                 android:id="@+id/event_list_text"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
-                android:layout_marginLeft="5dp"
                 android:text="@string/event_list_text"
                 android:textColor="#000000"
                 android:textSize="20sp" />
@@ -88,18 +80,10 @@
             <FrameLayout
                 android:id="@+id/event_list_fragment_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/event_list_text"
-                android:background="@drawable/border" />
+                android:layout_height="200dp"
+                android:background="@drawable/border"
+                android:layout_marginBottom="10dp"/>
 
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="380dp"
-            android:layout_height="120dp"
-            android:layout_below="@id/event_list_layout"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp">
 
             <TextView
                 android:id="@+id/coupon_deal_board_text"
@@ -112,18 +96,23 @@
             <FrameLayout
                 android:id="@+id/coupon_deal_board_fragment_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="120dp"
                 android:layout_below="@id/coupon_deal_board_text"
                 android:background="@drawable/border" />
-        </RelativeLayout>
+
+        </LinearLayout>
+
+
     </RelativeLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        />
+        app:headerLayout="@layout/navi_header"
+        app:menu="@menu/navi_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
