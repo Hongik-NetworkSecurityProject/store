@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/navi_header_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/navi_header_logined_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/layout/navi_header_not_login.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/layout/navi_menu.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/navi_menu_fragment.xml" value="0.25" />
         <entry key="app/src/main/res/menu/navi_menu.xml" value="0.25104166666666666" />
       </map>
