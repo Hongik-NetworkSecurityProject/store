@@ -65,6 +65,7 @@
         </LinearLayout>
 
         <Button
+            android:id = "@+id/signin_button"
             android:layout_width="330dp"
             android:layout_height="60dp"
             android:layout_below="@id/login_util_layout"
