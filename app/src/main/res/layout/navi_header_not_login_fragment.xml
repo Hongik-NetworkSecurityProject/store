@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/signin_button"
+        android:id="@+id/menu_signin_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/navi_header_not_login_title"
@@ -26,10 +26,10 @@
         android:text="@string/sigin_in"/>
 
     <Button
-        android:id="@+id/signup_button"
+        android:id="@+id/menu_signup_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@id/signin_button"
+        android:layout_below="@id/menu_signin_button"
         android:background="@drawable/border"
         android:textSize="28sp"
         android:textStyle="bold"
