@@ -1,4 +1,4 @@
-package com.hongik.project.graduation.store.activity;
+package com.hongik.project.graduation.store.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -11,8 +11,8 @@ import android.widget.ImageButton;
 
 
 import com.hongik.project.graduation.store.R;
-import com.hongik.project.graduation.store.fragment.NaviContentFragment;
-import com.hongik.project.graduation.store.fragment.NaviHeaderFragment;
+import com.hongik.project.graduation.store.ui.fragment.NaviContentFragment;
+import com.hongik.project.graduation.store.ui.fragment.NaviHeaderFragment;
 
 public class MainActivity extends AppCompatActivity {
 

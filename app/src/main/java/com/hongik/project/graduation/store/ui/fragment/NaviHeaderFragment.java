@@ -1,4 +1,4 @@
-package com.hongik.project.graduation.store.fragment;
+package com.hongik.project.graduation.store.ui.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import androidx.fragment.app.Fragment;
 
 
 import com.hongik.project.graduation.store.R;
-import com.hongik.project.graduation.store.activity.LoginActivity;
-import com.hongik.project.graduation.store.activity.RegisterActivity;
+import com.hongik.project.graduation.store.ui.activity.LoginActivity;
+import com.hongik.project.graduation.store.ui.activity.RegisterActivity;
 
 public class NaviHeaderFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.hongik.project.graduation.store.activity;
+package com.hongik.project.graduation.store.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

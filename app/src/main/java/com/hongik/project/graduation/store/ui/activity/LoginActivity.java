@@ -1,4 +1,4 @@
-package com.hongik.project.graduation.store.activity;
+package com.hongik.project.graduation.store.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.hongik.project.graduation.store.R;
-import com.hongik.project.graduation.store.viewmodel.LoginViewModel;
+import com.hongik.project.graduation.store.application.viewmodel.LoginViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 
