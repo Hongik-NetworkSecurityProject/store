@@ -1,7 +1,9 @@
 package com.hongik.project.graduation.store.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.MutableLiveData;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,7 +12,19 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.hongik.project.graduation.store.R;
+import com.hongik.project.graduation.store.application.service.ProductService;
+import com.hongik.project.graduation.store.application.service.UserService;
 import com.hongik.project.graduation.store.application.viewmodel.LoginViewModel;
+import com.hongik.project.graduation.store.ui.network.request.UserLoginRequest;
+import com.hongik.project.graduation.store.ui.network.response.ProductDto;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -26,15 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
 
     private LoginViewModel loginViewModel;
-
-    public LoginActivity() {
-        this.edittextID = null;
-        this.edittextPassword = null;
-        this.loginButton = null;
-
-        this.loginViewModel = null;
-    }
-
+    private UserService userService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +56,15 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.signin_button);
 
         loginButton.setOnClickListener(view -> {
-            String userID = loginViewModel.getEdittextID();
-            String userPassword = loginViewModel.getEdittextPassword();
+            //String userID = loginViewModel.getEdittextID();
+            //String userPassword = loginViewModel.getEdittextPassword();
 
+            String userID = edittextID.getText().toString();
+            String userPassword = edittextPassword.getText().toString();
             login(userID, userPassword);
         });
     }
-
+    /*
     @Override
     protected void onStart() {
         super.onStart();
@@ -125,7 +133,34 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+     */
     private void login(String userID, String userPassword){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://34.234.228.90:7777/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        userService = retrofit.create(UserService.class);
+
+        Call <UserLoginRequest> userLogin = userService.userLogin(userID, userPassword);
+        userLogin.enqueue(new Callback<UserLoginRequest>() {
+            @Override
+            public void onResponse(Call<UserLoginRequest> call, Response<UserLoginRequest> response) {
+                if(response.isSuccessful()){
+                    Log.d(TAG, "Login 성공 : \t 결과 : \n" + response.body().toString());
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }
+                else{
+                    Log.d(TAG, "Login 실패");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UserLoginRequest> call, Throwable t) {
+                Log.d(TAG, "onFailure");
+            }
+        });
 
 
     }
