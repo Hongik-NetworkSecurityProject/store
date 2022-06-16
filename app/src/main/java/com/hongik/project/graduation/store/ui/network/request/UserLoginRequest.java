@@ -7,11 +7,11 @@ import lombok.ToString;
 
 @ToString
 public class UserLoginRequest {
-    @SerializedName("Username")
+    @SerializedName("username")
     @Expose
     private String id;
 
-    @SerializedName("Password")
+    @SerializedName("password")
     @Expose
     private String password;
 

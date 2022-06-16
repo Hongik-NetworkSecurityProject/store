@@ -19,11 +19,12 @@ public interface UserService {
     @FormUrlEncoded
     @POST("auth/signup/")
     Call<UserSignUpRequest> userSignUp(
-            @Field("Username") String id,
-            @Field("Password") String password,
-            @Field("Name") String name,
-            @Field("Email") String email,
-            @Field("Gender") String gender,
-            @Field("Age") int age
+            @Field("username") String id,
+            @Field("password") String password,
+            @Field("name") String name,
+            @Field("email") String email,
+            @Field("gender") String gender,
+            @Field("age") int age,
+            @Field("image") int image
     );
 }
