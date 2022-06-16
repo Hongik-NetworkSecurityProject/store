@@ -147,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<UserLoginRequest> call, Response<UserLoginRequest> response) {
                 if(response.isSuccessful()){
-                    Log.d(TAG, "Login 성공 : \t 결과 : \n" + response.toString());
+                    Log.d(TAG, "Login 성공 : \t 결과 : \n" + response.body().toString());
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
                 }
