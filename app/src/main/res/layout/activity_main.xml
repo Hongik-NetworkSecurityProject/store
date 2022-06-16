@@ -86,7 +86,7 @@
 
 
             <TextView
-                android:id="@+id/coupon_deal_board_text"
+                android:id="@+id/coupon_deal_board"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
                 android:text="@string/coupon_deal_board_text"
@@ -97,7 +97,7 @@
                 android:id="@+id/coupon_deal_board_fragment_container"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_below="@id/coupon_deal_board_text"
+                android:layout_below="@id/coupon_deal_board"
                 android:background="@drawable/border" />
 
         </LinearLayout>

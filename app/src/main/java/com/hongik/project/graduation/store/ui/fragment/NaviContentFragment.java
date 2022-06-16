@@ -1,4 +1,4 @@
-package com.hongik.project.graduation.store.fragment;
+package com.hongik.project.graduation.store.ui.fragment;
 
 import androidx.fragment.app.Fragment;
 

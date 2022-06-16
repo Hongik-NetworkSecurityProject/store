@@ -1,4 +1,4 @@
-package com.hongik.project.graduation.store.viewmodel;
+package com.hongik.project.graduation.store.application.viewmodel;
 
 import android.util.Log;
 
